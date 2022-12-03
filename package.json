@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "concurrently": "^7.5.0",
+    "dotenv": "^16.0.3",
+    "redux-persist": "^6.0.0"
+  },
+  "name": "e-commerce-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon backend/main.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node backend/dummydata/seeder",
+    "data:destroy": "node backend/dummydata/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnytpl/e-commerce-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rnytpl/e-commerce-app/issues"
+  },
+  "homepage": "https://github.com/rnytpl/e-commerce-app#readme",
+  "description": ""
+}
